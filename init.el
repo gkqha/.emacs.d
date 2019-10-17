@@ -24,7 +24,10 @@
 (add-hook 'after-init-hook
 	  (lambda () (require 'server)
 	    (unless (server-running-p) (server-start))))
-
+		
+(defvar k-gc-timer
+  (run-with-idle-timer 15 t
+                       'garbage-collect))
 
 (when (file-exists-p custom-file)
   (load custom-file))

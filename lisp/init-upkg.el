@@ -14,8 +14,8 @@
   (require 'package)
   (package-initialize)
   (setq package-archives
-    '(("melpa" . "https://mirrors.163.com/elpa/melpa/")
-      ("gnu" . "https://mirrors.163.com/elpa/gnu/"))))
+    '(("gnu" . "https://mirrors.cloud.tencent.com/elpa/gnu/")
+      ("melpa" . "https://mirrors.cloud.tencent.com/elpa/melpa/"))))
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)

@@ -2,6 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+	 ("\\.md\\'" . markdown-mode)
+	 ("\\.markdown\\'" . markdown-mode))
+  ;; :hook (after-init . markdown-mode)
+  :init (setq markdown-command "multimarkdown"))
 
 (use-package smex
   :ensure t

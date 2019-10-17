@@ -15,6 +15,11 @@
  truncate-lines t
  word-wrap t)
 
+;; Permanently force Emacs to indent with spaces, never with TABs
+(setq-default  indent-tabs-mode nil)
+
+;; turn on mouse in console mode
+(xterm-mouse-mode t)
 
 (display-time)
 (fset 'yes-or-no-p 'y-or-n-p)
